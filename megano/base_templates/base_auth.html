@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% block html_settings %}
+    <!--[if IE 7]>
+    <html class="ie7" lang="ru">
+    <![endif]-->
+    <!--[if IE 8]>
+    <html class="ie8" lang="ru">
+    <![endif]-->
+    <!--[if IE 9]>
+    <html class="ie9" lang="ru">
+    <![endif]-->
+    <!--[if IE 10]>
+    <html class="ie10" lang="ru">
+    <![endif]-->
+    <!--[if IE 11]>
+    <html class="ie11" lang="ru">
+    <![endif]-->
+
+{% endblock %}
+<!--[if gt IE 11]><!-->
+<html lang="ru">
+<!--<![endif]-->
+    {% block head %}
+    {% load i18n %}
+    {% load static %}
+        <head>
+            <title>Megano</title>
+            <meta name="description" content="Описание страницы">
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+            <link href="favicon.ico" rel="shortcut icon">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Regular.woff' %}" as="font">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Italic.woff' %}" as="font">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Bold.woff' %}" as="font">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Bold_Italic.woff' %}" as="font">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Light.woff' %}" as="font">
+            <link rel="preload" href="{% static 'assets/fonts/Roboto/Roboto-Light_Italic.woff' %}" as="font">
+            <link rel="stylesheet" href="{% static 'assets/css/fonts.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/basic.css' %}">
+            <link rel="stylesheet" href="{% static 'assets/css/extra.css' %}">
+            <script src="{% static 'assets/plg/CountDown/countdown.js' %}"></script>
+            <!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+        </head>
+    {% endblock %}
+
+    {% block body %}
+        <body class="Site">
+            <main class="Middle">
+                <div class="ControlPanel">
+                    <div class="wrap">
+                        <div class="row ControlPanel-row">
+                            <div class="row-block">
+                                <div class="row ControlPanel-rowSplit">
+                                    <div class="row-block hide_700">
+                                        <ul class="menu menu_img menu_smallImg ControlPanel-menu">
+                                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialHeader/tw.svg"%}" alt="tw.svg" /></a>
+                                            </li>
+                                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialHeader/in.svg"%}" alt="in.svg" /></a>
+                                            </li>
+                                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialHeader/pt.svg" %}" alt="pt.svg" /></a>
+                                            </li>
+                                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialHeader/mail.svg"%}" alt="mail.svg" /></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <nav class="row-block">
+                                <div class="row ControlPanel-rowSplit">
+                                    <div class="row-block"><a class="ControlPanel-title" href="{% url 'auth:login' %}">{% translate 'Log in' %}</a>
+                                        <a class="ControlPanel-title" href="{% url 'auth:register' %}">{% translate 'Registration' %}</a>
+                                    </div>
+                                </div>
+                            {% get_available_languages as LANGUAGES %}
+                            {% for lang in LANGUAGES %}
+                            {% if LANGUAGE_CODE == lang.0 %}
+                            {{lang.1}} ({{lang.0}})
+                            {% else %}
+                            <a href="{% url 'shopapp:set_language' %}?l={{lang.0}}">{{lang.1}} ({{lang.0}})</a>
+                            {% endif %} |
+                            {% endfor %}
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+                {% block middle %}
+                {% endblock %}
+            </main>
+        </body>
+    {% endblock %}
+
+
+    {% block footer %}
+    {% load i18n %}
+    {% load static %}
+        <footer class="Footer">
+            <div class="wrap">
+                <div class="row Footer-main">
+                    <div class="row-block"><a class="logo Footer-logo" href="{% url 'shopapp:index'%}"><img class="logo-image" src="{% static "assets/img/logo_footer.png" %}" alt="logo_footer.png" /></a>
+                    </div>
+                    <div class="row-block">
+                        <strong class="Footer-title">{% translate 'Navigation' %}
+                        </strong>
+                        <ul class="menu menu_vt Footer-menu">
+                            <li class="menu-item"><a class="menu-link" href="{% url 'shopapp:index'%}">{% translate 'Main' %}</a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="catalog.html">{% translate 'Catalogue' %}</a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="{% url 'shopapp:compare'%}">{% translate 'Compare' %}</a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="account.html">{% translate 'Profile' %}</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="row-block">
+                        <strong class="Footer-title">{% translate 'Contacts' %}
+                        </strong>
+                        <p>{% translate 'Phone' %}: 8.800.200.600<br>{% translate 'Email' %}: xxx@meg.com<br>
+                        </p>
+                        <ul class="menu menu_img menu_smallImg Footer-menuSoc">
+                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialFooter/fb.svg" %}" alt="fb.svg" /></a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialFooter/tw.svg" %}" alt="tw.svg" /></a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialFooter/in.svg" %}" alt="in.svg" /></a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialFooter/pt.svg" %}" alt="pt.svg" /></a>
+                            </li>
+                            <li class="menu-item"><a class="menu-link" href="#"><img src="{% static "assets/img/icons/socialFooter/mail.svg"%}" alt="mail.svg" /></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+
+    {% block bottom_scripts %}
+    {% load i18n %}
+    {% load static %}
+        <script src="{% static "assets/plg/jQuery/jquery-3.5.0.slim.min.js" %}"></script>
+        <script src="{% static "assets/plg/form/jquery.form.js" %}"></script>
+        <script src="{% static "assets/plg/form/jquery.maskedinput.min.js" %}"></script>
+        <script src="{% static "assets/plg/range/ion.rangeSlider.min.js" %}"></script>
+        <script src="{% static "assets/plg/Slider/slick.min.js" %}"></script>
+        <script src="{% static "assets/js/scripts.js" %}"></script>
+
+    {% endblock %}
+
+</html>

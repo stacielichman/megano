@@ -1,0 +1,873 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-06 13:21+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
+"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
+"(n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: base_templates/base_auth.html:71 shopapp/templates/shopapp/base_main.html:72
+#: user/templates/user/e-mail-complete.html:22
+#: user/templates/user/e-mail-confirm.html:21
+#: user/templates/user/e-mail-done.html:23 user/templates/user/e-mail.html:26
+#: user/templates/user/login.html:15 user/templates/user/login.html:27
+#: user/templates/user/register.html:34 user/templates/user/user_exists.html:21
+msgid "Log in"
+msgstr "Войти"
+
+#: base_templates/base_auth.html:72 shopapp/templates/shopapp/base_main.html:73
+#: user/templates/user/login.html:30 user/templates/user/register.html:13
+msgid "Registration"
+msgstr "Регистрация"
+
+#: base_templates/base_auth.html:103 shopapp/templates/shopapp/account.html:14
+#: shopapp/templates/shopapp/base_main.html:209
+#: shopapp/templates/shopapp/historyorder.html:14
+#: shopapp/templates/shopapp/profile.html:14
+msgid "Navigation"
+msgstr "Навигация"
+
+#: base_templates/base_auth.html:106
+#: shopapp/templates/shopapp/base_main.html:103
+#: shopapp/templates/shopapp/base_main.html:212
+#: shopapp/templates/shopapp/discount_list.html:13
+msgid "Main"
+msgstr "Главная"
+
+#: base_templates/base_auth.html:108
+#: shopapp/templates/shopapp/base_main.html:105
+#: shopapp/templates/shopapp/base_main.html:214
+msgid "Catalogue"
+msgstr "Каталог"
+
+#: base_templates/base_auth.html:110
+#: shopapp/templates/shopapp/base_main.html:107
+#: shopapp/templates/shopapp/base_main.html:216
+msgid "Compare"
+msgstr "Сравнить"
+
+#: base_templates/base_auth.html:112 shopapp/templates/shopapp/account.html:22
+#: shopapp/templates/shopapp/base_main.html:219
+#: shopapp/templates/shopapp/historyorder.html:22
+#: shopapp/templates/shopapp/profile.html:22
+msgid "Profile"
+msgstr "Профиль"
+
+#: base_templates/base_auth.html:118
+#: shopapp/templates/shopapp/base_main.html:225
+msgid "Contacts"
+msgstr "Контакты"
+
+#: base_templates/base_auth.html:120
+#: shopapp/templates/shopapp/base_main.html:227
+msgid "Phone"
+msgstr "Номер телефона"
+
+#: base_templates/base_auth.html:120 pay/forms.py:13
+#: shopapp/templates/shopapp/base_main.html:227
+msgid "Email"
+msgstr "Email"
+
+#: cart/apps.py:8
+msgid "корзина"
+msgstr "Корзина"
+
+#: cart/templates/cart/cart_detail.html:57
+#: cart/templates/cart/cart_detail_with_discount.html:50
+msgid "Promocode"
+msgstr "Промокод"
+
+#: cart/templates/cart/cart_detail.html:59
+#: cart/templates/cart/cart_detail_with_discount.html:52
+msgid "Apply"
+msgstr "Применить"
+
+#: cart/templates/cart/cart_detail.html:61
+#: cart/templates/cart/cart_detail_with_discount.html:54
+#: pay/templates/pay/order.html:209
+msgid "Total"
+msgstr "Всего"
+
+#: cart/templates/cart/cart_detail.html:64
+#: cart/templates/cart/cart_detail_with_discount.html:57
+msgid "Place an order"
+msgstr "Разместить заказ"
+
+#: core/apps.py:8
+msgid "core"
+msgstr "Ядро"
+
+#: core/models.py:24
+msgid "настройку сайта"
+msgstr ""
+
+#: core/models.py:25
+msgid "Настройки сайта"
+msgstr ""
+
+#: core/models.py:27 shopapp/models.py:12 shopapp/models.py:40
+#: shopapp/models.py:85 shopapp/models.py:185 user/models.py:11
+msgid "имя"
+msgstr ""
+
+#: core/models.py:28
+msgid "время кеширования"
+msgstr ""
+
+#: megano/settings.py:111
+msgid "English"
+msgstr ""
+
+#: megano/settings.py:111
+msgid "Русский"
+msgstr ""
+
+#: pay/apps.py:8
+msgid "pay"
+msgstr "Оплата"
+
+#: pay/forms.py:10 pay/templates/pay/order.html:62
+#: shopapp/templates/shopapp/profile.html:69
+msgid "Password"
+msgstr "Пароль"
+
+#: pay/forms.py:11
+msgid "Confirm password"
+msgstr "Забыли пароль?"
+
+#: pay/forms.py:12
+msgid "Full name"
+msgstr "Полное имя"
+
+#: pay/forms.py:15 pay/templates/pay/order.html:50
+#: pay/templates/pay/order.html:145 pay/templates/pay/order_step_4.html:53
+#: shopapp/templates/shopapp/lastorder.html:39
+#: shopapp/templates/shopapp/oneorder.html:39
+#: shopapp/templates/shopapp/profile.html:58
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: pay/forms.py:30
+msgid "Card number"
+msgstr "Номер карты"
+
+#: pay/forms.py:45 pay/templates/pay/order.html:86
+#: pay/templates/pay/order.html:161
+msgid "Ordinary delivery"
+msgstr "Обычная доставка"
+
+#: pay/forms.py:46 pay/templates/pay/order.html:91
+msgid "Express delivery"
+msgstr "Экспресс доставка"
+
+#: pay/forms.py:50 pay/forms.py:67 pay/templates/pay/order.html:159
+#: pay/templates/pay/order_step_4.html:67
+#: shopapp/templates/shopapp/historyorder.html:45
+#: shopapp/templates/shopapp/lastorder.html:53
+#: shopapp/templates/shopapp/oneorder.html:53
+msgid "Delivery type"
+msgstr "Тип доставки"
+
+#: pay/forms.py:53 pay/templates/pay/order.html:96
+#: pay/templates/pay/order.html:165 pay/templates/pay/order_step_4.html:73
+#: shopapp/templates/shopapp/lastorder.html:59
+#: shopapp/templates/shopapp/oneorder.html:59
+msgid "City"
+msgstr "Город"
+
+#: pay/forms.py:56 pay/templates/pay/order.html:101
+#: pay/templates/pay/order.html:171 pay/templates/pay/order_step_4.html:79
+#: shopapp/templates/shopapp/lastorder.html:65
+#: shopapp/templates/shopapp/oneorder.html:65
+msgid "Address"
+msgstr "Адрес"
+
+#: pay/forms.py:62 pay/templates/pay/order.html:116
+#: pay/templates/pay/order.html:179
+msgid "Online by card"
+msgstr "Онлайн картой"
+
+#: pay/forms.py:63 pay/templates/pay/order.html:121
+msgid "Online by randomly generated account"
+msgstr "Онлайн рандомно сгенерированным счетом"
+
+#: pay/models.py:9
+msgid "Cash"
+msgstr "Наличными"
+
+#: pay/models.py:10
+msgid "Credit card"
+msgstr "Картой"
+
+#: pay/models.py:14
+msgid "Pickup"
+msgstr "Самовывоз"
+
+#: pay/models.py:15
+msgid "Courier"
+msgstr "Курьером"
+
+#: pay/models.py:19
+msgid "Paid"
+msgstr "Оплачено"
+
+#: pay/models.py:20
+msgid "Cancelled"
+msgstr "Отменен"
+
+#: pay/models.py:26 pay/models.py:73 pay/models.py:109
+msgid "заказ"
+msgstr ""
+
+#: pay/models.py:27
+msgid "Заказы"
+msgstr ""
+
+#: pay/models.py:35 pay/models.py:116 shopapp/models.py:150
+#: shopapp/models.py:251
+msgid "пользователь"
+msgstr ""
+
+#: pay/models.py:37
+msgid "город"
+msgstr ""
+
+#: pay/models.py:38 shopapp/models.py:21
+msgid "адрес"
+msgstr ""
+
+#: pay/models.py:43
+msgid "оплата"
+msgstr ""
+
+#: pay/models.py:49 pay/models.py:101
+msgid "статус оплаты"
+msgstr ""
+
+#: pay/models.py:55
+msgid "доставка"
+msgstr ""
+
+#: pay/models.py:57
+msgid "создан"
+msgstr ""
+
+#: pay/models.py:58
+msgid "комментарий"
+msgstr ""
+
+#: pay/models.py:59
+msgid "номер заказа"
+msgstr ""
+
+#: pay/models.py:64
+msgid "заказ-товар"
+msgstr ""
+
+#: pay/models.py:65
+msgid "Заказы-товары"
+msgstr ""
+
+#: pay/models.py:75 shopapp/models.py:126
+msgid "цена"
+msgstr ""
+
+#: pay/models.py:76
+msgid "старая цена"
+msgstr ""
+
+#: pay/models.py:77 shopapp/models.py:128
+msgid "количество"
+msgstr ""
+
+#: pay/models.py:84 shopapp/models.py:82 shopapp/models.py:120
+#: shopapp/models.py:228
+msgid "продукт"
+msgstr ""
+
+#: pay/models.py:90
+msgid "транзакцию"
+msgstr ""
+
+#: pay/models.py:91
+msgid "Транзакции"
+msgstr ""
+
+#: pay/models.py:93
+msgid "uuid"
+msgstr ""
+
+#: pay/models.py:95
+msgid "сумма"
+msgstr ""
+
+#: pay/templates/pay/order.html:18 pay/templates/pay/order.html:39
+#: pay/templates/pay/order_step_1.html:19
+#: pay/templates/pay/order_step_1.html:34
+#: pay/templates/pay/order_step_2.html:18
+#: pay/templates/pay/order_step_3.html:18
+#: pay/templates/pay/order_step_4.html:18
+msgid "Step 1. User's parameters"
+msgstr "Шаг 1. Параметры пользователя"
+
+#: pay/templates/pay/order.html:20 pay/templates/pay/order.html:80
+#: pay/templates/pay/order_step_1.html:21
+#: pay/templates/pay/order_step_2.html:20
+#: pay/templates/pay/order_step_2.html:39
+#: pay/templates/pay/order_step_3.html:20
+#: pay/templates/pay/order_step_4.html:20
+msgid "Step 2. Delivery type"
+msgstr "Шаг 2. Тип доставки"
+
+#: pay/templates/pay/order.html:22 pay/templates/pay/order.html:110
+#: pay/templates/pay/order_step_1.html:22
+#: pay/templates/pay/order_step_2.html:22
+#: pay/templates/pay/order_step_3.html:22
+#: pay/templates/pay/order_step_3.html:39
+#: pay/templates/pay/order_step_4.html:22
+msgid "Step 3. Payment type"
+msgstr "Шаг 3. Способ оплаты"
+
+#: pay/templates/pay/order.html:24 pay/templates/pay/order.html:130
+#: pay/templates/pay/order_step_1.html:23
+#: pay/templates/pay/order_step_2.html:24
+#: pay/templates/pay/order_step_3.html:24
+#: pay/templates/pay/order_step_4.html:24
+#: pay/templates/pay/order_step_4.html:38
+msgid "Step 4. Order confirmation"
+msgstr "Шаг 4. Подтверждение заказа"
+
+#: pay/templates/pay/order.html:45 pay/templates/pay/order.html:139
+#: pay/templates/pay/order_step_4.html:47
+#: shopapp/templates/shopapp/lastorder.html:33
+#: shopapp/templates/shopapp/oneorder.html:33
+msgid "Surname Name Middle name"
+msgstr "ФИО"
+
+#: pay/templates/pay/order.html:55 pay/templates/pay/order.html:151
+#: pay/templates/pay/order_step_4.html:59
+#: shopapp/templates/shopapp/lastorder.html:45
+#: shopapp/templates/shopapp/oneorder.html:45
+#: shopapp/templates/shopapp/profile.html:63
+msgid "E-mail"
+msgstr "Email"
+
+#: pay/templates/pay/order.html:67 shopapp/templates/shopapp/profile.html:74
+msgid "Password confirmation"
+msgstr "Подтверждение пароля"
+
+#: pay/templates/pay/order.html:71 pay/templates/pay/order_step_1.html:61
+msgid "I am already registered"
+msgstr "Я уже зарегистрирован"
+
+#: pay/templates/pay/order.html:75 pay/templates/pay/order.html:105
+#: pay/templates/pay/order.html:125 pay/templates/pay/order_step_1.html:66
+#: pay/templates/pay/order_step_2.html:58
+#: pay/templates/pay/order_step_3.html:50
+msgid "Next"
+msgstr "Далее"
+
+#: pay/templates/pay/order.html:141
+msgid "Ivanov Ivan Ivanovich"
+msgstr "Иванов Иван Иванович"
+
+#: pay/templates/pay/order.html:167
+msgid "Moscow"
+msgstr "Москва"
+
+#: pay/templates/pay/order.html:173
+msgid "Akademik Artsimovich str, 10, aprt. 10"
+msgstr "ул. Академика Арцимовича, д. 10, кв. 10"
+
+#: pay/templates/pay/order.html:177 pay/templates/pay/order_step_4.html:85
+#: pay/templates/pay/payment_card.html:10
+#: pay/templates/pay/payment_card.html:15
+#: pay/templates/pay/payment_invoice.html:10
+#: pay/templates/pay/payment_invoice.html:15
+#: shopapp/templates/shopapp/historyorder.html:51
+#: shopapp/templates/shopapp/lastorder.html:71
+#: shopapp/templates/shopapp/oneorder.html:71
+msgid "Payment"
+msgstr "Оплата"
+
+#: pay/templates/pay/order.html:213 pay/templates/pay/order_step_4.html:121
+#: pay/templates/pay/payment_card.html:36
+#: pay/templates/pay/payment_invoice.html:54
+#: shopapp/templates/shopapp/lastorder.html:119
+#: shopapp/templates/shopapp/oneorder.html:120
+msgid "Pay"
+msgstr "Оплата"
+
+#: pay/templates/pay/order_step_1.html:13
+#: pay/templates/pay/order_step_2.html:12
+#: pay/templates/pay/order_step_3.html:12
+#: pay/templates/pay/order_step_4.html:12
+msgid "Progress"
+msgstr "Прогресс заполнение"
+
+#: pay/templates/pay/order_step_4.html:117
+#: shopapp/templates/shopapp/historyorder.html:57
+msgid "Total cost"
+msgstr "Всего:"
+
+#: pay/templates/pay/payment_invoice.html:51
+msgid "Generate a random account"
+msgstr "Сгенерироовать рандомный счет"
+
+#: pay/templates/pay/progress_payment.html:10
+#: pay/templates/pay/progress_payment.html:15
+msgid "Wait for payment"
+msgstr "Ожидание оплаты"
+
+#: pay/templates/pay/progress_payment.html:24
+msgid "Waiting for the confirmation of the payment system"
+msgstr "Ждем подтверждения оплаты платежной системой"
+
+#: shopapp/apps.py:8
+msgid "shopapp"
+msgstr "Магазин"
+
+#: shopapp/models.py:9
+msgid "продавца"
+msgstr ""
+
+#: shopapp/models.py:10
+msgid "Продавцы"
+msgstr ""
+
+#: shopapp/models.py:13 shopapp/models.py:86 shopapp/models.py:186
+msgid "описание"
+msgstr ""
+
+#: shopapp/models.py:18 shopapp/models.py:70 shopapp/models.py:206
+msgid "картинка"
+msgstr ""
+
+#: shopapp/models.py:20
+msgid "номер телефона"
+msgstr ""
+
+#: shopapp/models.py:22
+msgid "email"
+msgstr ""
+
+#: shopapp/models.py:37
+msgid "категорию"
+msgstr ""
+
+#: shopapp/models.py:38
+msgid "Категории"
+msgstr ""
+
+#: shopapp/models.py:41 shopapp/models.py:87
+msgid "архивирован"
+msgstr ""
+
+#: shopapp/models.py:66
+msgid "продукт-картинку"
+msgstr ""
+
+#: shopapp/models.py:67
+msgid "Продукты-картинки"
+msgstr ""
+
+#: shopapp/models.py:72 shopapp/models.py:89
+msgid "предпросмотр"
+msgstr ""
+
+#: shopapp/models.py:83
+msgid "Продукты"
+msgstr ""
+
+#: shopapp/models.py:92
+msgid "картинки"
+msgstr ""
+
+#: shopapp/models.py:98
+msgid "категория"
+msgstr ""
+
+#: shopapp/models.py:100
+msgid "детали"
+msgstr ""
+
+#: shopapp/models.py:113
+msgid "продукт-продавца"
+msgstr ""
+
+#: shopapp/models.py:114
+msgid "Продукты-продавцы"
+msgstr ""
+
+#: shopapp/models.py:123 shopapp/models.py:271
+msgid "продавец"
+msgstr ""
+
+#: shopapp/models.py:129
+msgid "скидка"
+msgstr ""
+
+#: shopapp/models.py:143
+msgid "просмотр истории"
+msgstr ""
+
+#: shopapp/models.py:144
+msgid "Просмотр историй"
+msgstr ""
+
+#: shopapp/models.py:153 shopapp/models.py:161
+msgid "дата создания"
+msgstr ""
+
+#: shopapp/models.py:173
+msgid "RUB"
+msgstr ""
+
+#: shopapp/models.py:182
+msgid "скидку"
+msgstr ""
+
+#: shopapp/models.py:183
+msgid "Скидки"
+msgstr ""
+
+#: shopapp/models.py:187
+msgid "продукты"
+msgstr ""
+
+#: shopapp/models.py:188
+msgid "дата начала"
+msgstr ""
+
+#: shopapp/models.py:189
+msgid "дата конца"
+msgstr ""
+
+#: shopapp/models.py:190
+msgid "промокод"
+msgstr ""
+
+#: shopapp/models.py:191
+msgid "группа"
+msgstr ""
+
+#: shopapp/models.py:192
+msgid "активная"
+msgstr ""
+
+#: shopapp/models.py:194
+msgid "значение"
+msgstr ""
+
+#: shopapp/models.py:200
+msgid "тип"
+msgstr ""
+
+#: shopapp/models.py:217
+msgid "отзыв"
+msgstr ""
+
+#: shopapp/models.py:218
+msgid "Отзывы"
+msgstr ""
+
+#: shopapp/models.py:221
+msgid "автор"
+msgstr ""
+
+#: shopapp/models.py:230
+msgid "содержание"
+msgstr ""
+
+#: shopapp/models.py:232
+msgid "созданные отзывы"
+msgstr ""
+
+#: shopapp/models.py:247 shopapp/models.py:258
+msgid "Введите правильный номер. Пример: +7 (999) 999 99 99"
+msgstr ""
+
+#: shopapp/models.py:254
+msgid "аватар"
+msgstr ""
+
+#: shopapp/models.py:264
+msgid "отчество"
+msgstr ""
+
+#: shopapp/models.py:275
+msgid "профиль"
+msgstr ""
+
+#: shopapp/models.py:276
+msgid "Профили"
+msgstr ""
+
+#: shopapp/templates/shopapp/account.html:20
+#: shopapp/templates/shopapp/base_main.html:119
+#: shopapp/templates/shopapp/historyorder.html:20
+#: shopapp/templates/shopapp/profile.html:20
+msgid "Personal account"
+msgstr "Личный кабинет"
+
+#: shopapp/templates/shopapp/account.html:24
+#: shopapp/templates/shopapp/account.html:60
+#: shopapp/templates/shopapp/historyorder.html:24
+#: shopapp/templates/shopapp/profile.html:24
+msgid "Orders history"
+msgstr "История заказов"
+
+#: shopapp/templates/shopapp/account.html:27
+#: shopapp/templates/shopapp/historyorder.html:27
+#: shopapp/templates/shopapp/profile.html:26
+msgid "Last order"
+msgstr "Последний заказ"
+
+#: shopapp/templates/shopapp/account.html:50
+msgid "Edit the profile"
+msgstr "Редактировать профиль"
+
+#: shopapp/templates/shopapp/account.html:59
+#: shopapp/templates/shopapp/historyorder.html:41
+#: shopapp/templates/shopapp/lastorder.html:11
+#: shopapp/templates/shopapp/oneorder.html:11
+msgid "Order"
+msgstr "Заказ"
+
+#: shopapp/templates/shopapp/account.html:65
+msgid "Delivery type:"
+msgstr "Тип доставки"
+
+#: shopapp/templates/shopapp/account.html:71
+msgid "Payment:"
+msgstr "Оплата:"
+
+#: shopapp/templates/shopapp/account.html:77
+msgid "Total cost:"
+msgstr "Всего:"
+
+#: shopapp/templates/shopapp/account.html:83
+msgid "Status:"
+msgstr "Статус:"
+
+#: shopapp/templates/shopapp/account.html:105
+msgid "Last viewed products"
+msgstr "Последние просмотренные товары"
+
+#: shopapp/templates/shopapp/account.html:138
+msgid "No views yet"
+msgstr "Нет просмотренных товаров"
+
+#: shopapp/templates/shopapp/base_main.html:105
+msgid "Discounts"
+msgstr "Скидки"
+
+#: shopapp/templates/shopapp/base_main.html:120
+msgid "Log out"
+msgstr "Выйти"
+
+#: shopapp/templates/shopapp/base_main.html:123
+msgid "Administrative section"
+msgstr "Административный раздел"
+
+#: shopapp/templates/shopapp/base_main.html:134
+msgid "Show navigation"
+msgstr "Показать навигацию"
+
+#: shopapp/templates/shopapp/base_main.html:146
+msgid "All categories"
+msgstr "Все категории"
+
+#: shopapp/templates/shopapp/base_main.html:186
+msgid "Search"
+msgstr "Поиск"
+
+#: shopapp/templates/shopapp/comparison.html:28
+msgid "Characteristic"
+msgstr "Характеристики"
+
+#: shopapp/templates/shopapp/comparison.html:29
+msgid "Value"
+msgstr "Значение"
+
+#: shopapp/templates/shopapp/comparison.html:32
+msgid "General parameters"
+msgstr "Общие параметры"
+
+#: shopapp/templates/shopapp/comparison.html:63
+msgid "Add to cart"
+msgstr "Добавить в корзину"
+
+#: shopapp/templates/shopapp/discount_list.html:15
+msgid "Blog"
+msgstr "Блог"
+
+#: shopapp/templates/shopapp/discountdetails.html:32
+msgid "Discount time"
+msgstr "Время действия скидки"
+
+#: shopapp/templates/shopapp/discountdetails.html:38
+#, fuzzy
+#| msgid "Registration"
+msgid "Description"
+msgstr "Регистрация"
+
+#: shopapp/templates/shopapp/discountdetails.html:47
+msgid "The following products are discounted"
+msgstr "На следующие товары распространяется скидка"
+
+#: shopapp/templates/shopapp/historyorder.html:63
+#: shopapp/templates/shopapp/lastorder.html:77
+#: shopapp/templates/shopapp/oneorder.html:77
+msgid "Status"
+msgstr "Статус:"
+
+#: shopapp/templates/shopapp/historyorder.html:75
+msgid "No orders yet"
+msgstr "Пока нет заказов"
+
+#: shopapp/templates/shopapp/index.html:20
+msgid "Get Started"
+msgstr "Приступить"
+
+#: shopapp/templates/shopapp/index.html:49
+msgid "from"
+msgstr "от"
+
+#: shopapp/templates/shopapp/index.html:68
+msgid "LIMITED OFFERS"
+msgstr "ОГРАНИЧЕННОЕ ПРЕДЛОЖЕНИЕ"
+
+#: shopapp/templates/shopapp/index.html:85
+msgid "days"
+msgstr "дней"
+
+#: shopapp/templates/shopapp/index.html:91
+msgid "hours"
+msgstr "ч"
+
+#: shopapp/templates/shopapp/index.html:97
+msgid "mins"
+msgstr "мин"
+
+#: shopapp/templates/shopapp/index.html:103
+msgid "secs"
+msgstr "сек"
+
+#: shopapp/templates/shopapp/index.html:114
+msgid "Top-products"
+msgstr "Топ Продукты"
+
+#: shopapp/templates/shopapp/index.html:123
+msgid "No image"
+msgstr "Изображение остутсвует"
+
+#: shopapp/templates/shopapp/index.html:149
+msgid "LAST VIEWED PRODUCTS"
+msgstr "ПОСЛЕДНИЕ ПРОСМОТРЕННЫЕ ТОВАРЫ"
+
+#: shopapp/templates/shopapp/lastorder.html:27
+#: shopapp/templates/shopapp/oneorder.html:27
+msgid "Order date"
+msgstr "Дата заказа"
+
+#: shopapp/templates/shopapp/lastorder.html:84
+#: shopapp/templates/shopapp/oneorder.html:84
+msgid "The payment failed"
+msgstr "Оплата не прошла"
+
+#: shopapp/templates/shopapp/lastorder.html:86
+#: shopapp/templates/shopapp/oneorder.html:86
+msgid "The payment didn't occur"
+msgstr "Оплата не выполнена"
+
+#: shopapp/templates/shopapp/profile.html:41
+msgid "Avatar"
+msgstr "Аватар"
+
+#: shopapp/templates/shopapp/profile.html:51
+msgid "User's name"
+msgstr "Имя пользователя"
+
+#: shopapp/templates/shopapp/profile.html:71
+msgid "Here your password can be changed"
+msgstr "Здесь можно изменить пароль"
+
+#: shopapp/templates/shopapp/profile.html:76
+msgid "Key in the password again"
+msgstr "Введите пароль повторно"
+
+#: shopapp/templates/shopapp/profile.html:80
+msgid "Save"
+msgstr "Сохранить"
+
+#: shopapp/templates/shopapp/profile.html:83
+msgid "The profile is saved successfully"
+msgstr "Пароль успешно сохранен"
+
+#: shopapp/templates/shopapp/seller_detail.html:9
+msgid "Top Products:"
+msgstr "Топ Продукты"
+
+#: user/apps.py:8
+msgid "user_app"
+msgstr "Пользователь"
+
+#: user/models.py:8
+msgid "роль"
+msgstr ""
+
+#: user/models.py:9
+msgid "Роли"
+msgstr ""
+
+#: user/templates/user/e-mail-complete.html:15
+msgid "The password is successfully changed"
+msgstr "Пароль успешно изменен"
+
+#: user/templates/user/e-mail-confirm.html:18
+#: user/templates/user/e-mail.html:23
+msgid "Get the verification code"
+msgstr "Получить проверочный код"
+
+#: user/templates/user/e-mail-done.html:15
+msgid "Password recovery (2/2)"
+msgstr "Востановление пароля (2/2)"
+
+#: user/templates/user/e-mail-done.html:16
+msgid "Verification code is sent, check your inbox!"
+msgstr "Проверочный код отправлен, проверьте вашу почту"
+
+#: user/templates/user/e-mail.html:15
+msgid "Password recovery (1/2)"
+msgstr "Востановление пароля (1/2)"
+
+#: user/templates/user/e-mail.html:16
+msgid "To recover the password, key in the email address"
+msgstr "Чтобы восстановить пароль, введите адрес электронной почты"
+
+#: user/templates/user/login.html:29
+msgid "Forgot password?"
+msgstr "Забыли пароль?"
+
+#: user/templates/user/register.html:30
+msgid "Register"
+msgstr "Регистрация"
+
+#: user/templates/user/user_exists.html:15
+msgid "User exists"
+msgstr "Пользователь существует"

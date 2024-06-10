@@ -1,0 +1,75 @@
+{% extends 'shopapp/base_main.html' %}
+{% load i18n %}
+{% load static %}
+{% block middle %}
+    <div class="Middle">
+        <div class="wrap">
+            <div class="Product">
+                <div class="ProductCard">
+                    {% for product in products %}
+                        <div class="ProductCard-desc">
+                            <div class="ProductCard-header">
+
+                                <h2 class="ProductCard-title">{{ product.name }}
+                                </h2>
+                                <div class="ProductCard-look">
+
+                                    <div class="ProductCard-photo">
+                                        <img src="{{ product.img }}" alt="{{ product.name }}.png">
+                                    </div>
+                                </div>
+                                <div class="Tabs Tabs_default">
+                                    <div class="Tabs-wrap">
+                                        <div class="Tabs-block" id="description">
+                                            <div class="table">
+                                                <table>
+                                                    <tr>
+                                                        <th class="hed">{% translate 'Characteristic' %}</th>
+                                                        <th class="hed">{% translate 'Value' %}</th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><b>{% translate 'General parameters' %}</b></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    {% for key, value in product.details.items %}
+                                                        <tr>
+                                                            {% if key in product.similar %}
+                                                                <td class="comparis">{{ key }}</td>
+                                                                <td class="comparis">{{ value }}</td>
+                                                            {% else %}
+                                                                <td>{{ key }}</td>
+                                                                <td>{{ value }}</td>
+                                                            {% endif %}
+
+                                                    {% endfor %}
+                                                </table>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="ProductCard-info">
+                                <div class="ProductCard-cost">
+                                    <div class="ProductCard-price">{{ product.price }}$
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ProductCard-cart">
+                                <div class="ProductCard-cartElement"><a class="btn btn_primary" href="cart.html"><img
+                                        class="btn-icon" src="{% static 'assets/img/icons/card/cart_white.svg' %}"
+                                        alt="cart_white.svg"/><span class="btn-content">{% translate 'Add to cart' %}</span></a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+

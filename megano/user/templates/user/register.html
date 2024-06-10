@@ -1,0 +1,41 @@
+{% extends 'base_auth.html' %}
+
+{% load static %}
+{% load i18n %}
+{% block middle %}
+<div class="wrap">
+            <div class="row Header-rowMain">
+                <div class="row-block Header-logo"><a class="logo" href="{% url 'shopapp:index'%}"><img class="logo-image" src="{% static 'assets/img/logo.png' %}" alt="logo.png" /></a>
+                </div>
+            </div>
+            <div class="wrapper">
+                <div class="header">
+                    <h3 class="sign-in">{% translate 'Registration' %}</h3>
+
+                </div>
+                <div class="clear"></div>
+
+                <form action="{% url 'auth:register' %}" method="post">
+                    {% csrf_token %}
+                    <div>
+                        <input class="user-input" type="text" name="name" id="name" placeholder="Имя" />
+                    </div>
+                    <div>
+                        <input class="user-input" type="email" name="login" id="email" placeholder="E-mail" />
+                    </div>
+                    <div>
+
+                        <input type="password" name="pass" id="pass" placeholder="Пароль" />
+                    </div>
+                    <input onclick="register()" type="submit" value="{% translate 'Register' %}" />
+
+
+                    <a class="registr" href="{% url 'auth:login' %}">
+                        {% translate 'Log in' %}
+                    </a>
+                    <div class="clear"></div>
+                </form>
+            </div>
+        </div>
+    <script src="{% static "assets/js/register.js" %}"></script>
+{% endblock %}

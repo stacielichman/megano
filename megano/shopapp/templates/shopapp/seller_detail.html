@@ -1,0 +1,17 @@
+{% extends 'shopapp/base_main.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block middle %}
+    <h1>{{ seller.name }}</h1>
+    <p>{{ seller.description }}</p>
+    <img src="{{ seller.image.url }}" alt="Seller Image">
+    <h2>{% translate 'Top Products:' %}</h2>
+    <ul>
+        {% for product in top_products %}
+            <li>{{ product.name }}</li>
+        {% empty %}
+            <li>No top products available.</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

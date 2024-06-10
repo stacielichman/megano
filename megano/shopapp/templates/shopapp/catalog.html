@@ -1,0 +1,137 @@
+{% extends "shopapp/base_main.html" %}
+{% load i18n %}
+{% load static %}
+{% block middle %}
+    <div class="Middle Middle_top">
+        <div class="Middle-top">
+            <div class="wrap">
+                <div class="Middle-header">
+                    <h1>{{ category }}</h1>
+                     <div class="Section-columnSection">
+                        <header class="Section-header">
+                            <div class="Section-columnContent">
+                            <form class="form" action="#" method="post">
+                                <div class="form-group">
+                                    <div class="range Section-columnRange">
+                                        <input class="range-line" id="price-2" name="price" type="text" data-type="double" data-min="1" data-max="10000" />
+                                        <div class="range-price">Цена:&#32;
+                                            <div class="rangePrice">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-input form-input_full" id="title" name="title" type="text" placeholder="Название" />
+                                </div>
+                                <div class="form-group">
+                                    <input class="form-input form-input_full" id="description" name="description" type="text" placeholder="Описание" />
+                                </div>
+                                <div class="form-group">
+                                    <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
+                                </div>
+                                <div class="form-group">
+                                   <a id="apply-button-1" href="{% url 'shopapp:catalog' pk=category.pk %}">Применить фильтры</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </header>
+                        </div>
+                        <div class="Section-content">
+                            <div class="Sort">
+                                <form id="sort-form">
+                                   <div>
+                                       <label for="sort-select">Сортировать по:</label>
+                                       <input type="radio" id="price" name="list-filter" value="price">
+                                       <label for="price">Цена</label>
+                                       <input type="radio" id="popularity" name="list-filter" value="popularity">
+                                       <label for="popularity">Популярность</label>
+                                       <input type="radio" id="novelty" name="list-filter" value="novelty">
+                                       <label for="novelty">Новизна</label>
+                                       <input type="radio" id="reviews" name="list-filter" value="reviews">
+                                       <label for="reviews">Отзывы</label>
+                                   </div>
+                                   <a id="apply-button" href="{% url 'shopapp:catalog' pk=category.pk %}">Применить</a>
+                                </form>
+
+                        </div>
+                     <div class="Cards">
+                    {% for contact in page_obj %}
+                        <div class="Card"><a class="Card-picture" href="{% url 'shopapp:product' pk=contact.pk %}"><img src="{{ contact.preview.image.url }}" alt="card.jpg" /></a>
+                            <div class="Card-content">
+                                <strong class="Card-title"><a href="product.html">{{ contact.name }}</a>
+                                </strong>
+                                <div class="Card-description">
+                                    <div class="Card-cost"><span class="Card-price">{{ contact.min_price }}</span>
+                                    </div>
+                                    <div class="Card-category">{{ contact.category.name }}
+                                    </div>
+                                    <div class="Card-hover"><a class="Card-btn" href="#"><img src="{% static 'assets/img/icons/card/cart.svg' %}" alt="cart.svg" /></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    </div>
+                    <div class="Pagination">
+                            <div class="Pagination-ins">
+                                {% if page_obj.has_previous %}
+                                <a class="Pagination-element Pagination-element_prev" href="?page={{ page_obj.previous_page_number }}">
+                                    <img src="{% static 'assets/img/icons/prevPagination.svg' %}" alt="prevPagination.svg" /></a>
+                                {% endif %}
+                                {% for p in page_obj.paginator.page_range %}
+                                <a class="Pagination-element Pagination-element_current" href="?page={{ p }}"><span class="Pagination-text">{{ p }}</span></a>
+                                {% endfor %}
+                                {% if page_obj.has_next %}
+                                <a class="Pagination-element Pagination-element_prev" href="?page={{ page_obj.next_page_number }}">
+                                    <img src="{% static 'assets/img/icons/nextPagination.svg' %}" alt="nextPagination.svg" /></a>
+                                {% endif %}
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script>
+   $(document).ready(function() {
+
+      var applyButton = $('#apply-button-1');
+
+      applyButton.click(function(event) {
+        event.preventDefault();
+        var url = applyButton.attr('href');
+        var sliderElement = document.querySelector("#price-2");
+
+        var priceFrom = sliderElement.value.split(';')[0];
+        var priceTo = sliderElement.value.split(';')[1];
+
+        var title = document.getElementById("title").value;
+        var description = document.getElementById("description").value;
+
+
+        url += "?priceFrom=" + priceFrom + "&priceTo=" + priceTo + "&nameFilter=" + encodeURIComponent(title) +
+        '&descriptionFilter=' + encodeURIComponent(description);
+
+        window.location.href = url;
+      });
+    });
+</script>
+<script>
+    $(document).ready(function() {
+
+      var applyButton = $('#apply-button');
+      var checkboxes = $('input[name="list-filter"]');
+
+      applyButton.click(function(event) {
+        event.preventDefault();
+
+        var url = applyButton.attr('href');
+        var selectedParams = checkboxes.filter(':checked').val()
+
+        url += '?param=' + selectedParams;
+
+        window.location.href = url;
+      });
+    });
+</script>
+{% endblock %}

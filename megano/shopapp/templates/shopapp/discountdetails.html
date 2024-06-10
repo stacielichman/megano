@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+{% extends 'shopapp/base_main.html' %}
+{% load i18n %}
+{% load static %}
+{% block middle %}
+
+
+<div class="Middle Middle_top">
+
+    <div class="Middle-top">
+        <div class="wrap">
+            <div class="Middle-header">
+                <h1 class="Middle-title">{{ discount.name }}
+                    {% if discount.image %}
+                    <div class="Card"><a class="Card-picture" href="#"><img src="{{ discount.image.url }}" alt="product.png" /></a></div>
+                    {% endif %}
+                </h1>
+            </div>
+        </div>
+    </div>
+    <div class="Section">
+        <div class="wrap">
+            <div class="Section-content">
+                <div class="Orders">
+                </div>
+                <div class="Order">
+                    <div class="Order-infoBlock">
+                        <div class="Order-personal">
+                            <div class="row">
+                                <div class="row-block">
+                                    <div class="Order-info Order-info_date">
+                                        <div class="Order-infoContent">{% translate 'Discount time' %}:
+                                        </div>
+                                        <div class="Order-infoType">с {{ discount.date_start|date:"d.m.y" }} по {{ discount.date_start|date:"d.m.y" }}
+                                        </div>
+                                    </div>
+                                    <div class="Order-info Order-info_date">
+                                        <div class="Order-infoContent">{% translate 'Description' %}:
+                                        </div>
+                                        <div class="Order-infoType">{{ discount.description }}
+                                        </div>
+                                    </div>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <div class="Order-info Order-info_date">
+                                        <div class="Middle-title">{% translate 'The following products are discounted' %}:
+                                        </div>
+                                </div>
+
+                        <div class="Cart Cart_order">
+                        {% if products %}
+                        {% for product in products %}
+                            <div class="Cart-product">
+                                <div class="Cart-block Cart-block_row">
+                                    {% if product.preview.image.url %}
+                                    <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="#"><img class="Cart-img" src="{{ product.preview.image.url }}" alt="card.jpg" /></a>
+                                    </div>
+                                    {% endif %}
+                                    <div class="Cart-block Cart-block_info"><a class="Cart-title" href="#">{{ product.name }}</a>
+                                        <div class="Cart-desc">{{ product.description }}
+                                        </div>
+                                    </div>
+                                    <div class="Cart-block Cart-block_price">
+                                        <div class="Cart-price">${{ product.price }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        {% endfor %}
+                        {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+</html>

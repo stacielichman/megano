@@ -1,0 +1,61 @@
+{% extends 'shopapp/base_main.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block middle %}
+<div class="Middle Middle_top">
+        <div class="Middle-top">
+            <div class="wrap">
+                <div class="Middle-header">
+                    <h1 class="Middle-title">{% translate 'Payment' %}
+                    </h1>
+                    <ul class="breadcrumbs Middle-breadcrumbs">
+                        <li class="breadcrumbs-item"><a href="{% url 'shopapp:index'%}">home</a>
+                        </li>
+                        <li class="breadcrumbs-item breadcrumbs-item_current"><span>{% translate 'Payment' %}</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="Section">
+            <div class="wrap">
+
+
+{#                <form class="form Payment" action="#" method="post">#}
+{#                    <div class="Payment-card">#}
+{#                        <div class="form-group">#}
+{#                            <label class="form-label">Номер счета#}
+{#                            </label>#}
+{#                            <input class="form-input Payment-bill" id="numero1" name="numero1" type="text" placeholder="9999 9999" data-mask="9999 9999" data-validate="require pay" />#}
+{#                        </div>#}
+{#                        <div class="form-group"><a class="btn btn_success Payment-generate" href="#">{% translate 'Generate random account' %}</a>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                    <div class="Payment-pay"><a class="btn btn_primary" href="{% url 'pay:progressPayment' %}">{% translate 'Pay' %}</a>#}
+{#                    </div>#}
+{#                </form>#}
+
+                <form class="form Payment" action="#" method="post">
+                    {% csrf_token %}
+
+                    {% for field in form %}
+                        <div class="Payment-card">
+                            <div class="form-group">
+                                <label class="form-label">{{ field.label_tag }}</label>
+                                {{ field }}
+                            </div>
+                        </div>
+                    {% endfor %}
+
+                    <div class="form-group"><a class="btn btn_success Payment-generate" href="#">{% translate 'Generate a random account' %}</a>
+                    </div>
+                    <div class="Payment-pay">
+                        <button type="submit" class="btn btn_primary">{% translate 'Pay' %}</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

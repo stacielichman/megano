@@ -1,0 +1,28 @@
+{% extends 'base_auth.html' %}
+{% load static %}
+{% load i18n %}
+{% block middle %}
+    <div class="wrap">
+        <div class="row Header-rowMain">
+            <div class="row-block Header-logo">
+                <a class="logo" href="{% url 'shopapp:index' %}">
+                    <img class="logo-image" src="{% static "assets/img/logo.png" %}" alt="logo.png"/>
+                </a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <h3 class="sign-in">{% translate 'Password recovery (2/2)' %}</h3>
+                <h5>{% translate 'Verification code is sent, check your inbox!' %}</h5>
+            </div>
+
+            <form method="post">
+                {% csrf_token %}
+                {{ form }}
+                <a class="registr" href="{% url 'auth:login' %}">
+                    {% translate 'Log in' %}
+                </a>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends 'shopapp/base_main.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block middle %}
+<div class="Middle Middle_top">
+        <div class="Section">
+            <div class="wrap">
+                <div class="form Cart">
+                    {% for item in cart %}
+                    <div class="Cart-product">
+                        <div class="Cart-block Cart-block_row">
+                            <div class="Cart-block Cart-block_pict"><a class="Cart-pict" href="{% url 'shopapp:product' item.product_seller.product.pk %}"><img class="Cart-img" src="{{ item.product_seller.product.preview.image.url }}" alt="{{ item.product_seller.product.name }}"></a>
+                            </div>
+                            <div class="Cart-block Cart-block_info"><a class="Cart-title" href="{% url 'shopapp:product' item.product_seller.product.pk %}">{{ item.product_seller.product.name }}</a>
+                                <div class="Cart-desc">{{ item.product_seller.product.description }}
+                                </div>
+                            </div>
+                            <div class="Cart-block Cart-block_price">
+                                <div class="Cart-price">{{ item.product_seller.price }}$
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Cart-block Cart-block_row">
+                            <div class="Cart-block Cart-block_seller">
+                                <!-- - var options = setOptions(items, ['value', 'selected', 'disabled']);-->
+
+                            </div>
+                                <div class="Cart-block Cart-block_amount">
+                                    <div class="Cart-amount">
+                                        <div class="Amount">
+                                            <form action="{% url 'cart:remove_inside_cart' item.product_seller.id %}" method="post">
+                                              {% csrf_token %}
+                                              <button class="Cart-delete" type="submit">-</button>
+{#                                              <button class="Amount-remove" type="submit"></button>#}
+                                            </form>
+                                            <div class="Amount-input form-input">{{ item.quantity }}</div>
+                                            <form action="{% url 'cart:add_inside_cart' item.product_seller.id %}" method="post">
+                                              {% csrf_token %}
+                                              <button class="Cart-delete" type="submit">+</button>
+{#                                              <button class="Amount-add" type="submit"></button>#}
+                                            </form>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            <div class="Cart-block Cart-block_delete">
+                                <a class="Cart-delete" href="{% url 'cart:remove_cart' item.product_seller.id %}"><img src="{% static 'assets/img/icons/card/delete.svg' %}" alt="delete.svg" /></a>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                <div class="Cart-total">
+                    <div class="Cart-block Cart-block_total">
+                        <form action="" method="post">
+                            {% csrf_token %}
+                        <strong class="Cart-title">{% translate 'Promocode' %}:</strong>
+                        <input id="promocode" name="promocode" type="text" maxlength="100">
+                        <button type="submit">{% translate 'Apply' %}</button></p>
+                        <p>
+                            <strong class="Cart-title">{% translate 'Total' %}:</strong>
+                                <span class="Cart-price">{{ cart.get_total_price }}$</span>
+                                <div class="Cart-block">
+                                    <a class="btn btn_success btn_lg" href="{% url 'pay:step_1' %}">{% translate 'Place an order' %}</a>
+                                </div>
+                        </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

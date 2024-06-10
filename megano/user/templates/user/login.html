@@ -1,0 +1,36 @@
+{% extends 'base_auth.html' %}
+
+{% load i18n %}
+{% load static %}
+{% block middle %}
+    <div class="wrap">
+        <div class="row Header-rowMain">
+            <div class="row-block Header-logo"><a class="logo" href="{% url 'shopapp:index' %}"><img class="logo-image"
+                                                                                      src="{% static "assets/img/logo.png" %}"
+                                                                                      alt="logo.png"/></a>
+            </div>
+        </div>
+        <div class="wrapper">
+            <div class="header">
+                <h3 class="sign-in">{% translate 'Log in' %}</h3>
+            </div>
+            <div class="clear"></div>
+            <form method="post">
+                {% csrf_token %}
+                <div>
+                    <input class="user-input" type="text" name="username" id="name" placeholder="E-mail"/>
+                </div>
+                <div>
+                    <input type="password" name="password" id="pass" placeholder="*********"/>
+                </div>
+                <div>
+                    <input onclick="login()" type="submit" value="{% translate 'Log in' %}"/>
+                </div>
+                <a class="forgot-label" href="{% url 'auth:recovery_password' %}">{% translate 'Forgot password?' %}</a>
+                <a class="registr" href="{% url 'auth:register' %}">{% translate 'Registration' %}</a>
+            </form>
+        </div>
+
+    </div>
+    <script src="{% static "assets/js/login.js" %}"></script>
+{% endblock %}
