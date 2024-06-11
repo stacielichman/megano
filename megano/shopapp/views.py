@@ -270,13 +270,18 @@ class ProfileUpdateView(UserPassesTestMixin, TemplateView):
                 fs = FileSystemStorage(
                     location=f"/uploads/users/user_{self.request.user.pk}/avatar/{image.name}"
                 )
+                print(fs.base_location)
                 img_name = fs.save(image.name, image)
+                print(img_name)
                 img_url = fs.url(img_name)
+                print(img_url)
                 user.profile.avatar = img_url
 
             user.username = request.POST.get("name")
-            # if request.POST.get("password") == request.POST.get("passwordReply"):
-            #     user.password = request.POST.get("password")
+            if request.POST.get("password") == request.POST.get("passwordReply"):
+                user_p = User.objects.get(username=user.username)
+                user_p.set_password = request.POST.get("password")
+                user_p.save()
             user.email = request.POST.get("mail")
             user.profile.phone = request.POST.get("phone")
             user.profile.phone = request.POST.get("phone")
